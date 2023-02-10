@@ -16,16 +16,16 @@ void setup()
 
 void loop()
 {
-  if(Serial.available()>0)//Checking is Serial data available
+  if(Serial.available()>0)
   {
-    char input = Serial.read(); //Storing value of read data into variable assigned
+    char input = Serial.read(); 
     switch(input)
     {
-     case 'F' : moveForward(); //Calling respective functions if mathced with case label 
+     case 'F' : moveForward();  
      break;
-     case 'B' : moveBackward(); // here is it important to use '' as that stores the ASCII value is the letter in the variable
+     case 'B' : moveBackward(); 
      break;
-     case 'L' : moveLeft(); // and hence we can use the int keyword
+     case 'L' : moveLeft(); 
      break;
      case 'R' : moveRight();
      break;
@@ -68,7 +68,7 @@ void moveLeft(){
 void Stop()
 {
   Serial.println("<Robot Name> Stop");
-  digitalWrite(Motor1Pin1,LOW);//Writing a digital LOW to all pins associated with movement of motor driver causes all motors to stop
+  digitalWrite(Motor1Pin1,LOW);
   digitalWrite(Motor1Pin2,LOW);
   digitalWrite(Motor2Pin1,LOW);
   digitalWrite(Motor2Pin2,LOW);
